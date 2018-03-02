@@ -105,6 +105,20 @@ git clone https://github.com/leriomaggio/deep-learning-keras-tensorflow.git
 
 ---
 
+# Deploy with Docker and docker-compose
+
+Before, requirements install Docker and docker-compose.
+
+- Create Image:
+```
+docker build -t keras_deeplearning .
+```
+
+- Up container
+```
+docker-compose up
+```
+
 # Requirements
 
 This tutorial requires the following packages:

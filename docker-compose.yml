@@ -1,0 +1,16 @@
+version: '3'
+services:
+    jupyter:
+      image: keras_deeplearning
+      command: bash -c "jupyter notebook --allow-root --ip=0.0.0.0"
+      volumes:
+        - .:/usr/src/app
+      ports:
+        - "8888:8888"
+    tensorboard:
+        image: keras_deeplearning
+        command: bash -c "tensorboard --logdir=/usr/src/app/tensor_logs"
+        volumes:
+            - .:/usr/src/app
+        ports:
+        - "6006:6006"
